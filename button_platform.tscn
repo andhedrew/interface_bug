@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://befyr6fkeuje"]
+
+[ext_resource type="Theme" uid="uid://dxhxfmr40iylb" path="res://Actors/interface_theme.tres" id="1_2ilam"]
+[ext_resource type="Script" path="res://ButtonPlatform.gd" id="2_15aws"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfubc"]
+size = Vector2(56, 20)
+
+[node name="ButtonPlatform" type="Button"]
+offset_left = 13.0
+offset_top = 48.0
+offset_right = 67.0
+offset_bottom = 66.0
+theme = ExtResource("1_2ilam")
+text = "Press"
+script = ExtResource("2_15aws")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(27, 9)
+shape = SubResource("RectangleShape2D_cfubc")

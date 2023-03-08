@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://blx5uxs63a2bp"]
+
+[ext_resource type="Theme" uid="uid://ckkgduxpm0lys" path="res://Actors/interface_theme.tres" id="1_ndvn7"]
+[ext_resource type="Script" path="res://LineEditPusher.gd" id="2_my5nt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ludm"]
+size = Vector2(24, 18)
+
+[node name="LineEditPusher" type="LineEdit"]
+offset_right = 24.0
+offset_bottom = 18.0
+size_flags_horizontal = 0
+theme = ExtResource("1_ndvn7")
+script = ExtResource("2_my5nt")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-8, -88)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(20, 97)
+shape = SubResource("RectangleShape2D_3ludm")
